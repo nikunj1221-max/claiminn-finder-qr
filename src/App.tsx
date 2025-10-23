@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => (
+  <>
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -22,6 +23,11 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
+  <div className="p-6 rounded-xl bg-sky-500 text-white shadow-lg">
+  Tailwind utilities working ✅
+</div>
+
+  </>
 );
 
 export default App;

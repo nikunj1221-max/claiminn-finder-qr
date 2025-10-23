@@ -1,11 +1,13 @@
+/* ----------------------------- */
+/* Tailwind core layers          */
+/* ----------------------------- */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
+/* ----------------------------- */
+/* Design system: HSL tokens     */
+/* ----------------------------- */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -40,11 +42,13 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
+    /* Gradients & Shadows */
     --gradient-hero: linear-gradient(135deg, hsl(183 70% 42%), hsl(183 70% 55%));
     --gradient-accent: linear-gradient(135deg, hsl(32 95% 55%), hsl(32 95% 65%));
     --shadow-elegant: 0 10px 30px -10px hsl(183 70% 42% / 0.2);
     --shadow-glow: 0 0 40px hsl(183 70% 55% / 0.15);
 
+    /* Sidebar palette */
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -55,6 +59,9 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  /* ----------------------------- */
+  /* Dark mode variables           */
+  /* ----------------------------- */
   .dark {
     --background: 210 25% 8%;
     --foreground: 210 40% 98%;
@@ -100,14 +107,39 @@ All colors MUST be HSL.
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  /* Global Tailwind applications */
+  * {
+    border-color: hsl(var(--border));
+  }
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
 }
 
-@layer base {
-  * {
-    @apply border-border;
+}
+
+/* ----------------------------- */
+/* Optional reusable utilities   */
+/* ----------------------------- */
+@layer utilities {
+  .border-1 {
+    border-width: 1px;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .gradient-hero {
+    background-image: var(--gradient-hero);
+  }
+
+  .gradient-accent {
+    background-image: var(--gradient-accent);
   }
 }
