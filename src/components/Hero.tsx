@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Search, QrCode } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -9,19 +8,19 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 bg-[image:radial-gradient(circle_at_50%_120%,hsl(var(--primary-glow)/0.1),transparent_50%)]" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden w-full">
+      <div className="absolute inset-0 bg-[image:radial-gradient(circle_at_50%_120%,hsl(var(--primary-glow)/0.1),transparent_50%)] w-full" />
       
-      <div className="container mx-auto px-4 py-32 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+      <div className="w-full px-4 py-32 relative z-10">
+        <div className="w-full px-8">
           {/* Text Content */}
-          <div className="text-center lg:text-left animate-fade-in">
+          <div className="text-center animate-fade-in max-w-5xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-primary/10 border border-primary/20">
               <Search className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary">Reuniting People with Their Belongings</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-glow">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient from-primary to-primary-glow">
               Lost Something?
               <br />
               We'll Help You Find It
@@ -66,20 +65,6 @@ const Hero = () => {
                 <div className="text-sm text-muted-foreground">Success Rate</div>
               </div>
             </div>
-          </div>
-
-          {/* Hero Image */}
-          <div className="relative animate-scale-in">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/20">
-              <img 
-                src={heroImage} 
-                alt="Happy people reuniting with their lost items through ClaimInn" 
-                className="w-full h-auto object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
-            </div>
-            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-accent rounded-full blur-3xl opacity-50" />
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary rounded-full blur-3xl opacity-30" />
           </div>
         </div>
       </div>
