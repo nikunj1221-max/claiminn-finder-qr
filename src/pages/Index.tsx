@@ -3,7 +3,7 @@ import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import RecentlyFoundItems from "@/components/RecentlyFoundItems";
 import QRGenerator from "@/components/QRGenerator";
-import ReportLostItem from "@/components/ReportLostItem";
+import ReportItemSelector from "@/components/ReportItemSelector";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -14,7 +14,7 @@ const Index = () => {
       <HowItWorks />
       <RecentlyFoundItems />
       <QRGenerator />
-      <ReportLostItem />
+      <ReportItemSelector />
       <Footer />
     </div>
   );

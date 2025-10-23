@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 
-const ReportLostItem = () => {
+const ReportFoundItem = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     itemName: "",
@@ -39,8 +39,8 @@ const ReportLostItem = () => {
     }
 
     toast({
-      title: "Item Reported Successfully!",
-      description: "We'll notify you if anyone finds your item."
+      title: "Found Item Reported Successfully!",
+      description: "Thank you for helping reunite items with their owners."
     });
 
     // Reset form
@@ -97,7 +97,7 @@ const ReportLostItem = () => {
 
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <Label htmlFor="location">Last Known Location *</Label>
+              <Label htmlFor="location">Found Location *</Label>
               <Input
                 id="location"
                 name="location"
@@ -109,7 +109,7 @@ const ReportLostItem = () => {
               />
             </div>
             <div>
-              <Label htmlFor="date">Date Lost</Label>
+              <Label htmlFor="date">Date Found</Label>
               <Input
                 id="date"
                 name="date"
@@ -135,7 +135,7 @@ const ReportLostItem = () => {
           </div>
 
           <div className="border-t border-border pt-6">
-            <h3 className="text-lg font-semibold mb-4 text-foreground">Contact Information</h3>
+            <h3 className="text-lg font-semibold mb-4 text-foreground">Your Contact Information</h3>
             <div className="space-y-4">
               <div>
                 <Label htmlFor="contactName">Your Name *</Label>
@@ -182,7 +182,7 @@ const ReportLostItem = () => {
             type="submit"
             className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg py-6"
           >
-            Submit Report
+            Submit Found Item
           </Button>
         </form>
       </CardContent>
@@ -190,4 +190,4 @@ const ReportLostItem = () => {
   );
 };
 
-export default ReportLostItem;
+export default ReportFoundItem;
