@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Search, QrCode } from "lucide-react";
+import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -12,56 +13,73 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[image:radial-gradient(circle_at_50%_120%,hsl(var(--primary-glow)/0.1),transparent_50%)]" />
       
       <div className="container mx-auto px-4 py-32 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-primary/10 border border-primary/20">
-            <Search className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Reuniting People with Their Belongings</span>
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+          {/* Text Content */}
+          <div className="text-center lg:text-left animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-primary/10 border border-primary/20">
+              <Search className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-primary">Reuniting People with Their Belongings</span>
+            </div>
+
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-glow">
+              Lost Something?
+              <br />
+              We'll Help You Find It
+            </h1>
+
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+              ClaimInn is your trusted platform for reporting lost items, finding what others have lost, 
+              and protecting your belongings with QR codes.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Button 
+                size="lg"
+                onClick={() => scrollToSection('report')}
+                className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 shadow-elegant"
+              >
+                <Search className="w-5 h-5 mr-2" />
+                Report Lost Item
+              </Button>
+              <Button 
+                size="lg"
+                variant="outline"
+                onClick={() => scrollToSection('generate-qr')}
+                className="border-2 border-primary text-primary hover:bg-primary/10 text-lg px-8 py-6"
+              >
+                <QrCode className="w-5 h-5 mr-2" />
+                Generate QR Code
+              </Button>
+            </div>
+
+            <div className="mt-16 grid grid-cols-3 gap-8">
+              <div className="text-center lg:text-left">
+                <div className="text-4xl font-bold text-primary mb-2">1000+</div>
+                <div className="text-sm text-muted-foreground">Items Recovered</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-4xl font-bold text-primary mb-2">500+</div>
+                <div className="text-sm text-muted-foreground">Active Users</div>
+              </div>
+              <div className="text-center lg:text-left">
+                <div className="text-4xl font-bold text-primary mb-2">98%</div>
+                <div className="text-sm text-muted-foreground">Success Rate</div>
+              </div>
+            </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-glow">
-            Lost Something?
-            <br />
-            We'll Help You Find It
-          </h1>
-
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            ClaimInn is your trusted platform for reporting lost items, finding what others have lost, 
-            and protecting your belongings with QR codes.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg"
-              onClick={() => scrollToSection('report-lost')}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8 py-6 shadow-elegant"
-            >
-              <Search className="w-5 h-5 mr-2" />
-              Report Lost Item
-            </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              onClick={() => scrollToSection('generate-qr')}
-              className="border-2 border-primary text-primary hover:bg-primary/10 text-lg px-8 py-6"
-            >
-              <QrCode className="w-5 h-5 mr-2" />
-              Generate QR Code
-            </Button>
-          </div>
-
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">1000+</div>
-              <div className="text-muted-foreground">Items Recovered</div>
+          {/* Hero Image */}
+          <div className="relative animate-scale-in">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/20">
+              <img 
+                src={heroImage} 
+                alt="Happy people reuniting with their lost items through ClaimInn" 
+                className="w-full h-auto object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">500+</div>
-              <div className="text-muted-foreground">Active Users</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">98%</div>
-              <div className="text-muted-foreground">Success Rate</div>
-            </div>
+            <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-accent rounded-full blur-3xl opacity-50" />
+            <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary rounded-full blur-3xl opacity-30" />
           </div>
         </div>
       </div>
