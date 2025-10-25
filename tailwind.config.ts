@@ -22,6 +22,7 @@ const config: Config = {
     },
 
     extend: {
+       
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -91,11 +92,16 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        gradientGlow: {
+            '0%, 100%': { backgroundPosition: '0% 50%' },
+            '50%': { backgroundPosition: '100% 50%' },
+          },
       },
 
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        'gradientFlow': 'gradientGlow 4s ease infinite',
       },
     },
   },

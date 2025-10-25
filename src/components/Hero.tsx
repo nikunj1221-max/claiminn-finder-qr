@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Search, QrCode } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -20,7 +21,7 @@ const Hero = () => {
               <span className="text-sm font-medium text-primary">Reuniting People with Their Belongings</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient from-primary to-primary-glow">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-clip-text  bg-gradient-from-primary to-primary-glow">
               Lost Something?
               <br />
               We'll Help You Find It

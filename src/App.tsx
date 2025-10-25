@@ -13,6 +13,7 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
+      
       <Sonner />
       <BrowserRouter>
         <Routes>
@@ -23,9 +24,7 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
-  <div className="p-6 rounded-xl bg-sky-500 text-white shadow-lg">
-  Tailwind utilities working ✅
-</div>
+ 
 
   </>
 );

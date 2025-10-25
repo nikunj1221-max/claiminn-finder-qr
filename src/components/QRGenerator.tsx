@@ -23,7 +23,7 @@ const QRGenerator = () => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
-    });
+      });
   };
 
   const generateQR = () => {
