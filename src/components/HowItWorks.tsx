@@ -9,8 +9,8 @@ const HowItWorks = () => {
     },
     {
       icon: QrCode,
-      title: "Generate QR Code",
-      description: "Create unique QR codes for your valuables. Anyone who finds it can scan and contact you."
+      title: "Database Matching",
+      description: "we will look through reported found items to find potential matches for your lost item."
     },
     {
       icon: Bell,
