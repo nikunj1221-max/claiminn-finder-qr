@@ -1,4 +1,4 @@
-import { Search, QrCode, CheckCircle, Bell } from "lucide-react";
+import { Search, KeyIcon , CheckCircle, Bell } from "lucide-react";
 
 const HowItWorks = () => {
   const steps = [
@@ -8,7 +8,7 @@ const HowItWorks = () => {
       description: "Fill in details about your lost item including location, description, and contact info."
     },
     {
-      icon: QrCode,
+      icon: KeyIcon,
       title: "Database Matching",
       description: "we will look through reported found items to find potential matches for your lost item."
     },

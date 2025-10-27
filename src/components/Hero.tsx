@@ -71,7 +71,7 @@ const Hero = () => {
             </div>
 
             <div className="mt-16 grid grid-cols-3 gap-14">
-              <div className="text-center    lg:text-left">
+              <div className="text-center   lg:text-left">
                 <div className="text-4xl font-bold text-primary mb-2">100+</div>
                 <div className="text-sm text-muted-foreground">Items Recovered</div>
               </div>
