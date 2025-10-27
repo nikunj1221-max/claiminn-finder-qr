@@ -136,7 +136,7 @@ const QRGenerator = () => {
                 </div>
                 <Button 
                   onClick={generateQR}
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                  className="w-full bg-amber-200 hover:bg-primary/90 text-primary-foreground"
                 >
                   Generate QR Code
                 </Button>
@@ -161,9 +161,9 @@ const QRGenerator = () => {
                     </div>
                     <Button 
                       onClick={downloadQR}
-                      className="bg-accent hover:bg-accent/90 text-accent-foreground"
+                      className="bg-amber-200  hover:bg-accent/90 text-accent-foreground"
                     >
-                      <Download className="w-4 h-4 mr-2" />
+                      <Download className="w-4 h-4 mr-2 " />
                       Download QR Code
                     </Button>
                     <p className="text-sm text-muted-foreground text-center">

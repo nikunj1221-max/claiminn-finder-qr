@@ -88,7 +88,7 @@ const RecentlyFoundItems = () => {
                   <Calendar className="w-4 h-4 text-primary" />
                   <span>{item.date}</span>
                 </div>
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Button className="w-full bg-amber-200 hover:bg-primary/90 text-primary-foreground">
                   Claim This Item
                 </Button>
               </CardContent>

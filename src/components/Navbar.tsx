@@ -50,7 +50,8 @@ const Navbar = () => {
 
           <Button 
             onClick={() => scrollToSection('report-lost')}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            className="  border-2 border-primary/60 text-primary bg-amber-200 dark:bg-black hover:bg-green-200 dark:hover:bg-black  px-8 py-4 rounded-lg shadow-lg"
+             
           >
             Report Lost Item
           </Button>

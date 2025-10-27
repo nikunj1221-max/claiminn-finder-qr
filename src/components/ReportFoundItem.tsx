@@ -180,7 +180,7 @@ const ReportFoundItem = () => {
 
           <Button 
             type="submit"
-            className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg py-6"
+            className="w-full bg-amber-200 hover:bg-green-400 text-accent-foreground text-lg py-6"
           >
             Submit Found Item
           </Button>

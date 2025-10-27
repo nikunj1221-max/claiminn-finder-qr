@@ -180,7 +180,7 @@ const ReportLostItem = () => {
 
           <Button 
             type="submit"
-            className="w-full bg-accent hover:bg-accent/90 text-accent-foreground text-lg py-6"
+            className="w-full bg-amber-200 hover:bg-orange-500 text-accent-foreground text-lg py-6"
           >
             Submit Report
           </Button>
