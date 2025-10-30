@@ -1,5 +1,5 @@
 import React from "react";
-
+import logo from "@/assets/logo.jpg";
 /**
  * Claiminn Login Page
  * - TailwindCSS required
@@ -43,8 +43,17 @@ export default function ClaiminnLogin({ onLoginSuccess }: LoginProps) {
         </section>
 
         {/* Right Form Panel */}
-        <section className="px-6 sm:px-10 md:px-12 lg:px-16 py-10 md:py-14 flex items-center bg-white">
+        <section className="px-6 sm:px-10 md:px-12 lg:px-8 py-5 md:py-14 flex items-center bg-white">
           <div className="w-full max-w-md mx-auto">
+            
+             <div className="flex items-center gap-0 mt-0 mb-20 ">
+            <img 
+              src={logo} 
+              alt="ClaimInn Logo" 
+              className="w-8 h-8 rounded-full object-contain"
+            />
+            <span className="text-2xl font-bold text-foreground ml-2">ClaimInn</span>
+          </div>
             <header className="mb-6">
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
                 Login to your Account
