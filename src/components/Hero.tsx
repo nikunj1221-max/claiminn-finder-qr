@@ -63,7 +63,7 @@ const Hero = () => {
                 size="lg"
                 variant="outline"
                 onClick={() => scrollToSection('report')}
-                className="w-full sm:w-auto text-center border-2 border-primary/60 text-primary bg-amber-200 dark:bg-black hover:bg-green-200 dark:hover:bg-black text-lg px-8 py-4 rounded-lg shadow-lg"
+                className="w-full sm:w-auto text-center border-2 border-black text-primary bg-amber-200 dark:bg-black hover:bg-green-200 dark:hover:bg-black text-lg px-8 py-4 rounded-lg shadow-lg"
               >
                 <QrCode className="w-5 h-5 mr-2 bg-slate-50" />
                 Report found item
