@@ -18,7 +18,7 @@ const Index = () => {
   if (!isLoggedIn) {
     return <ClaiminnLogin onLoginSuccess={handleLoginSuccess} />;
   }
-
+        
   return (
     <div className="min-h-screen">
       <Navbar />

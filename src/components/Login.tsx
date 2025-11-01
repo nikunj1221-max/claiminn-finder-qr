@@ -16,10 +16,10 @@ export default function ClaiminnLogin({ onLoginSuccess }: LoginProps) {
     onLoginSuccess();
   };
   return (
-    <main className="min-h-screen bg-white text-slate-800">
-      <div className="mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 min-h-screen">
+    <main className="min-h-screen bg-white text-slate-800 relative overflow-hidden">
+      <div className="mx-auto max-w-6xl relative">
         {/* Left Brand Panel - Hidden on mobile, visible on md screens and up */}
-        <section className="hidden md:flex relative bg-amber-600/90 text-white p-8 md:p-12 flex-col gap-8 justify-between">
+        <section className="hidden md:flex absolute left-0 top-0 bottom-0 w-[55%] bg-amber-600/90 text-white p-8 md:p-12 flex-col gap-8 justify-between rounded-r-3xl shadow-2xl">
           <div>
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight drop-shadow-sm">
               Claiminn
@@ -43,10 +43,10 @@ export default function ClaiminnLogin({ onLoginSuccess }: LoginProps) {
         </section>
 
         {/* Right Form Panel */}
-        <section className="px-6 sm:px-10 md:px-12 lg:px-8 py-5 md:py-14 flex items-center bg-white">
+        <section className="relative md:ml-[45%] px-6 sm:px-10 md:px-12 lg:px-16 py-5 md:py-14 flex items-center bg-white rounded-l-3xl shadow-xl">
           <div className="w-full max-w-md mx-auto">
             
-             <div className="flex items-center gap-0 mt-0 mb-20 ">
+             <div className="flex items-center gap-0 mt-0 mb-16 ">
             <img 
               src={logo} 
               alt="ClaimInn Logo" 
