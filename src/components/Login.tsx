@@ -16,8 +16,8 @@ export default function ClaiminnLogin({ onLoginSuccess }: LoginProps) {
     onLoginSuccess();
   };
   return (
-    <main className="min-h-screen bg-white text-slate-800 relative overflow-hidden">
-      <div className="mx-auto max-w-6xl relative">
+    <main className="min-h-screen  bg-white text-slate-800 mt-3 mb-0 relative overflow-hidden">
+      <div className="mx-auto max-w-6xl relative ">
         {/* Left Brand Panel - Hidden on mobile, visible on md screens and up */}
         <section className="hidden md:flex absolute left-0 top-0 bottom-0 w-[55%] bg-amber-600/90 text-white p-8 md:p-12 flex-col gap-8 justify-between rounded-r-3xl shadow-2xl">
           <div>
@@ -50,12 +50,12 @@ export default function ClaiminnLogin({ onLoginSuccess }: LoginProps) {
             <img 
               src={logo} 
               alt="ClaimInn Logo" 
-              className="w-8 h-8 rounded-full object-contain"
+              className="w-11 h-11 rounded-full object-contain"
             />
-            <span className="text-2xl font-bold text-foreground ml-2">ClaimInn</span>
+            <span className="text-3xl font-bold text-foreground ml-2">ClaimInn</span>
           </div>
-            <header className="mb-6">
-              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-slate-900">
+            <header className="mb-5">
+              <h2 className="text-4xl md:text-4xl font-extrabold tracking-tight text-slate-900">
                 Login to your Account
               </h2>
               <p className="text-slate-500 mt-2">Please enter your details to login</p>
