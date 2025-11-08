@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "@/assets/logo.jpg";
+
 /**
  * Claiminn Login Page
  * - TailwindCSS required

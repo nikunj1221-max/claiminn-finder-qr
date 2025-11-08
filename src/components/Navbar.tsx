@@ -2,63 +2,52 @@ import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
 import logo from "@/assets/logo.jpg";
 
-const Navbar = () => {
-  const scrollToSection = (id: string) => {
-  const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
+import { Link } from "react-router-dom";
+// import { FaRegSnowflake } from "react-icons/fa"; // login icon (same as screenshot)
 
+export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r backdrop-blur-lg shadow-sm border-b border-transparent">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <img 
-              src={logo} 
-              alt="ClaimInn Logo" 
-              className="w-8 h-8 rounded-full object-contain"
-            />
-            <span className="text-2xl font-bold text-foreground ml-2">ClaimInn</span>
-          </div>
-          
-          <div className="hidden md:flex items-center gap-8">
-            <button 
-              onClick={() => scrollToSection('how-it-works')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              How It Works
-            </button>
-            <button 
-              onClick={() => scrollToSection('found-items')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Found Items
-            </button>
-            <button 
-              onClick={() => scrollToSection('generate-qr')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Generate QR
-            </button>
-            <button 
-              onClick={() => scrollToSection('report-lost')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Report Lost Item
-            </button>
-          </div>
-
-          <Button 
-            onClick={() => scrollToSection('report-lost')}
-            className="  border-2 border-primary/60 text-primary bg-amber-200 dark:bg-black hover:bg-green-200 dark:hover:bg-black  px-8 py-4 rounded-lg shadow-lg"
-             
-          >
-            Report Lost Item
-          </Button>
+    <nav className="w-full shadow-sm bg-white">
+      <div className="max-w-7xl mx-auto flex items-center justify-between py-4 px-4 w-full">
+        
+        {/* Logo */}
+        <div className="flex items-center gap-2">
+          <img 
+            src={logo} 
+            alt="ClaimInn Logo" 
+            className="w-6 h-6"
+          />
+          <span className="text-xl font-semibold text-[#0B2D81]">ClaimInn</span>
         </div>
+
+        {/* Menu Links */}
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-[#0B2D81]">
+          <Link to="/">Home</Link>
+          <Link to="/how-it-works">How it works</Link>
+          <Link to="/generate-qr">Generate QR</Link>
+          <Link to="/found-items">Found items</Link>
+          <Link to="/about">About</Link>
+        </div>
+
+        {/* Right: Login + Sign Up */}
+        <div className="flex items-center gap-4">
+          <Link 
+            to="/login" 
+            className="flex items-center gap-1 text-[#0B2D81] font-medium text-sm"
+          >
+            {/* <FaRegSnowflake size={14} />  */}
+            Login
+          </Link>
+
+          <Link 
+            to="/signup" 
+            className="bg-[#FFC225] hover:bg-[#ffb700] transition text-[#0B2D81] font-semibold text-sm px-4 py-2 rounded-full"
+          >
+            Sign up
+          </Link>
+        </div>
+
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}
