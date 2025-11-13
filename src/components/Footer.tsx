@@ -159,7 +159,7 @@ const Footer: React.FC = () => {
           <FaInstagram className="text-xl text-white hover:text-[#f7a30a] hover:scale-125 transition-all cursor-pointer" />
           <FaLinkedin className="text-xl text-white hover:text-[#f7a30a] hover:scale-125 transition-all cursor-pointer" />
           <FaYoutube className="text-xl text-white hover:text-[#f7a30a] hover:scale-125 transition-all cursor-pointer" />
-        </div>
+        </div> 
         <p className="text-gray-200 text-sm text-center">
           © 2025 ClaimInn. All rights reserved.{" "}
           <span className="font-semibold">Every item matters</span>
