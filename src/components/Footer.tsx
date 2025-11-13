@@ -1,4 +1,3 @@
-import { Mail, MapPin, Phone, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
