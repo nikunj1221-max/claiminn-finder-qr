@@ -1,8 +1,9 @@
-import { Search, Mail, MapPin, Phone } from "lucide-react";
-import { Input } from "@/components/ui/input";
+import { Mail, MapPin, Phone, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import { FaXTwitter, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa6";
+import { MdPhone, MdEmail } from "react-icons/md";
 
 const Footer: React.FC = () => {
   const { toast } = useToast();
@@ -151,8 +152,13 @@ const Footer: React.FC = () => {
         </div>
       </div>
 
-        <div className="border-t border-border mt-12 pt-8 text-center text-muted-foreground">
-          <p>&copy; 2025 ClaimInn. All rights reserved. Built with care to reunite people with their belongings.</p>
+      {/* Socials + Copyright */}
+      <div className="bg-[#1c348a] border-t border-[#253f9b] py-6 flex flex-col items-center justify-center space-y-4">
+        <div className="flex items-center gap-6">
+          <FaXTwitter className="text-xl text-white hover:text-[#f7a30a] hover:scale-125 transition-all cursor-pointer" />
+          <FaInstagram className="text-xl text-white hover:text-[#f7a30a] hover:scale-125 transition-all cursor-pointer" />
+          <FaLinkedin className="text-xl text-white hover:text-[#f7a30a] hover:scale-125 transition-all cursor-pointer" />
+          <FaYoutube className="text-xl text-white hover:text-[#f7a30a] hover:scale-125 transition-all cursor-pointer" />
         </div>
         <p className="text-gray-200 text-sm text-center">
           © 2025 ClaimInn. All rights reserved.{" "}
