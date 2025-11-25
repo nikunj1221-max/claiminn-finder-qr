@@ -10,6 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 
 const QRGenerator = () => {
   const { toast } = useToast();
+
   const [formData, setFormData] = useState({
     itemName: "",
     ownerName: "",
@@ -26,7 +27,8 @@ const QRGenerator = () => {
       });
   };
 
-  const generateQR = () => {
+  const generateQR = () =>
+ {
     if (!formData.itemName || !formData.ownerName || !formData.phone) {
       toast({
         title: "Missing Information",
@@ -35,6 +37,7 @@ const QRGenerator = () => {
       });
       return;
     }
+
     setShowQR(true);
     toast({
       title: "QR Code Generated!",
@@ -42,7 +45,7 @@ const QRGenerator = () => {
     });
   };
 
-  const downloadQR = () => {
+    const downloadQR = () => {
     const canvas = document.getElementById("qr-code") as HTMLCanvasElement;
     if (canvas) {
       const url = canvas.toDataURL("image/png");
