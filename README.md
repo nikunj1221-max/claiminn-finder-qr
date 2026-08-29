@@ -1,5 +1,5 @@
 # Welcome to your  project
-Name
+Name = ClaimInn 
 ## Project info
 
 
