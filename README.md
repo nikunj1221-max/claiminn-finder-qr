@@ -1,5 +1,5 @@
 # Welcome to your  project
-Name = ClaimInn QR based
+Name = ClaimInn QR based Item finder
 ## Project info
 
 
