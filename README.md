@@ -1,5 +1,5 @@
 # Welcome to your  project
-Name = ClaimInn 
+Name = ClaimInn QR
 ## Project info
 
 
