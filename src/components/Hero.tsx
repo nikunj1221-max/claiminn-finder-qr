@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import react  from 'react';
 export default function Hero() {
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
