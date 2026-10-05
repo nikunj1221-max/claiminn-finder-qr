@@ -1,12 +1,5 @@
-# Welcome to your  project
+
 Name = ClaimInn QR based Item finder
-## Project info
-
-
-## How can I edit this code?
- so
-There are several ways of editing your application.
-
 
 **Use your preferred IDE**
 
